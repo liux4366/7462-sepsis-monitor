@@ -1,9 +1,7 @@
-ame: Render Report
+on: [workflow_dispatch]
 
-on:
-  push:
-    branches: [main]
-  workflow_dispatch:
+
+name: Render Report
 
 jobs:
   build-deploy:
@@ -30,19 +28,23 @@ jobs:
             packages:
                any::knitr
                any::rmarkdown
-               any::tidyverse
+               any::jsonlite
                any::dplyr
                any::ggplot2
-               any::data.table
+               any::readr
                any::lubridate
+               any::tidyverse
+               any::data.table
+               any::googledrive
                any::tictoc
+               any::DT
                any::cowplot
 
       - name: Render document
         uses: quarto-dev/quarto-actions/render@v2
         with:
-          to: gfm
-          path: ICU report.qmd
+          to: html
+          path: ICU.qmd
 
       - name: Setup git config
         run: |
