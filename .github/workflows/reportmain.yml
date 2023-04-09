@@ -1,5 +1,9 @@
-on: [workflow_dispatch]
-
+on:
+  schedule:
+    - cron: '0 * * * *'
+  push:
+    branches: main
+  workflow_dispatch:
 
 name: Render Report
 
