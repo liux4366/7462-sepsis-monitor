@@ -1,0 +1,144 @@
+---
+title: "ICU report"
+format: html
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+library(data.table) ## For the fread function
+library(lubridate)
+
+source("sepsis_monitor_functions.R")
+```
+
+
+library(tictoc)
+
+tic()
+test1=makeSepsisDataset(n=50,read_fn = "fread")
+print(paste0("-----n=50,function=fdread"))
+toc()
+
+tic()
+test1=makeSepsisDataset(n=50,read_fn = "read_delim")
+print(paste0("-----n=50,function=read_delim"))
+toc()
+
+tic()
+test1=makeSepsisDataset(n=100,read_fn = "fread")
+print(paste0("-----n=100,function=fdread"))
+toc()
+
+tic()
+test1=makeSepsisDataset(n=100,read_fn = "read_delim")
+print(paste0("-----n=100,function=read_delim"))
+toc()
+
+tic()
+test1=makeSepsisDataset(n=500,read_fn = "fread")
+print(paste0("-----n=500,function=fdread"))
+
+
+```{r}
+library(googledrive)
+
+df <- makeSepsisDataset()
+
+# We have to write the file to disk first, then upload it
+df %>% write_csv("sepsis_data_temp.csv")
+
+# Uploading happens here
+sepsis_file <- drive_put(media = "sepsis_data_temp.csv", 
+          path = "https://drive.google.com/drive/folders/11IKA3vU7zxrzMB8ftvh5OZ7-x93-R-gi",
+          name = "sepsis_data.csv")
+
+# Set the file permissions so anyone can download this file.
+sepsis_file %>% drive_share_anyone()
+
+```
+
+```{r}
+### Date and Time: `r Sys.time()`
+drive_deauth()
+file_link <- "https://drive.google.com/file/d/1-ffRV8NmmnPN25PFa_ziGOSG9khU-Svc/view?usp=sharing"
+
+## All data up until now
+new_data <- updateData(file_link)
+
+## Include only most recent data
+most_recent_data <- new_data %>%
+  group_by(PatientID) %>%
+  filter(obsTime == max(obsTime))
+
+# A table listing the patients who currently have sepsis (if any), along with their most recent heart rate, temperature, and respiratory rate
+sepsis_patients <- most_recent_data %>%
+  filter(SepsisLabel == 1) %>%
+  select(PatientID, HR, Temp, Resp)
+sepsis_patients
+
+
+```
+
+```{r}
+#Plots for all patients who have sepsis (if any) that show the complete history of their heart rate, temperature, and respiratory rate during their time in the ICU.
+library(cowplot)
+sepsis_patients <- most_recent_data %>%
+  filter(SepsisLabel == 1) %>%
+  select(PatientID, HR, Temp, Resp)
+
+### "001118" "004939" "007540" "007540" Temperature: NA
+sepsis_patients_ids <- unique(sepsis_patients$PatientID)
+patient_plots <- list()
+for (patient in sepsis_patients_ids) { 
+  patient_data <- new_data %>%
+    filter(PatientID == patient) %>%
+    select(ICULOS, HR, Temp, Resp)
+  
+  plot_1 <- ggplot(patient_data, aes(x = ICULOS, y = HR)) +
+    geom_line() +
+    ggtitle(paste0("Heart Rate for Patient ", patient)) +
+    theme_minimal() +
+    xlab("Duration of ICU stay in hours") +
+    ylab("Heart Rate")
+  
+  plot_2 <- ggplot(patient_data, aes(x = ICULOS, y = Temp)) +
+    geom_line() +
+    ggtitle(paste0("Temperature for Patient ", patient)) +
+    theme_minimal() +
+    xlab("Duration of ICU stay in hours") +
+    ylab("Temperature")
+  
+  plot_3 <- ggplot(patient_data, aes(x = ICULOS, y = Resp)) +
+    geom_line() +
+    ggtitle(paste0("Respiratory Rate for Patient ", patient)) +
+    theme_minimal() +
+    xlab("Duration of ICU stay in hours") +
+    ylab("Respiratory Rate")
+  
+  patient_plots[[patient]] <- list(plot_1, plot_2, plot_3)
+}
+
+plot_grid(plotlist = unlist(patient_plots, recursive = FALSE),
+          ncol = 3, labels = "AUTO", label_size = 12)
+```
+
+```{r}
+#A table showing the change in heart rate, temperature, and respiratory rate between the last two measurements for all patients
+changing <- new_data %>%
+  group_by(PatientID) %>%
+  arrange(PatientID, ICULOS) %>%
+  slice_tail(n = 2) %>%
+  mutate(across(c(HR, Temp, Resp), list(change = ~ . - lag(.)))) %>%
+  filter(!is.na(HR_change) | !is.na(Temp_change) | !is.na(Resp_change)) %>%
+  select(PatientID, HR_change, Temp_change, Resp_change) %>%
+  pivot_longer(cols = c(HR_change, Temp_change, Resp_change), names_to = "variable", values_to = "change") %>%
+  mutate(change_direction = case_when(change > 0 ~ "increased",
+                                      change < 0 ~ "decreased",
+                                      TRUE ~ "same"))
+changing
+```
+
+
+
+
