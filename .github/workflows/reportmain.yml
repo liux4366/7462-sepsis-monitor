@@ -1,6 +1,7 @@
-name: Render Report
-
 on: [workflow_dispatch]
+
+
+name: Render Report
 
 jobs:
   build-deploy:
@@ -27,12 +28,16 @@ jobs:
             packages:
                any::knitr
                any::rmarkdown
-               any::tidyverse
+               any::jsonlite
                any::dplyr
                any::ggplot2
-               any::data.table
+               any::readr
                any::lubridate
+               any::tidyverse
+               any::data.table
+               any::googledrive
                any::tictoc
+               any::DT
                any::cowplot
 
       - name: Render document
@@ -50,3 +55,4 @@ jobs:
           git add .
           git commit -m "Updated report"
           git push origin main
+
