@@ -39,7 +39,7 @@ jobs:
         uses: quarto-dev/quarto-actions/render@v2
         with:
           to: html
-          path: ICU report.qmd
+          path: ICU.qmd
 
       - name: Setup git config
         run: |
