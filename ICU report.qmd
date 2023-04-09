@@ -4,6 +4,7 @@ format: html
 editor: visual
 ---
 
+
 ```{r}
 library(tidyverse)
 library(data.table) ## For the fread function
@@ -12,7 +13,7 @@ library(lubridate)
 source("sepsis_monitor_functions.R")
 ```
 
-
+```{r}
 library(tictoc)
 
 tic()
@@ -38,7 +39,7 @@ toc()
 tic()
 test1=makeSepsisDataset(n=500,read_fn = "fread")
 print(paste0("-----n=500,function=fdread"))
-
+```
 
 ```{r}
 library(googledrive)
@@ -87,9 +88,9 @@ sepsis_patients <- most_recent_data %>%
   filter(SepsisLabel == 1) %>%
   select(PatientID, HR, Temp, Resp)
 
-### "001118" "004939" "007540" "007540" Temperature: NA
 sepsis_patients_ids <- unique(sepsis_patients$PatientID)
 patient_plots <- list()
+
 for (patient in sepsis_patients_ids) { 
   patient_data <- new_data %>%
     filter(PatientID == patient) %>%
@@ -97,22 +98,22 @@ for (patient in sepsis_patients_ids) {
   
   plot_1 <- ggplot(patient_data, aes(x = ICULOS, y = HR)) +
     geom_line() +
-    ggtitle(paste0("Heart Rate for Patient ", patient)) +
-    theme_minimal() +
+    ggtitle(paste0("Heart Rate over time for Septic Patients ", patient)) +
+    theme_classic() +
     xlab("Duration of ICU stay in hours") +
     ylab("Heart Rate")
   
   plot_2 <- ggplot(patient_data, aes(x = ICULOS, y = Temp)) +
     geom_line() +
-    ggtitle(paste0("Temperature for Patient ", patient)) +
-    theme_minimal() +
+    ggtitle(paste0("Temperature over time for Septic Patients ", patient)) +
+    theme_classic() +
     xlab("Duration of ICU stay in hours") +
     ylab("Temperature")
   
   plot_3 <- ggplot(patient_data, aes(x = ICULOS, y = Resp)) +
     geom_line() +
-    ggtitle(paste0("Respiratory Rate for Patient ", patient)) +
-    theme_minimal() +
+    ggtitle(paste0("Respiratory Rate over time for Septic Patients ", patient)) +
+    theme_classic() +
     xlab("Duration of ICU stay in hours") +
     ylab("Respiratory Rate")
   
