@@ -149,836 +149,46 @@ Attaching package: 'tictoc'</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>3.203 sec elapsed</code></pre>
+<pre><code>3.017 sec elapsed</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tic</span>()</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>test1<span class="ot">=</span><span class="fu">makeSepsisDataset</span>(<span class="at">n=</span><span class="dv">50</span>,<span class="at">read_fn =</span> <span class="st">"read_delim"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Rows: 83 Columns: 41</code></pre>
+<pre><code>Rows: 29 Columns: 41</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>── Column specification ────────────────────────────────────────────────────────
 Delimiter: "|"
-dbl (33): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (8): EtCO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total, Tropo...
+dbl (26): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, HCO3, BUN, Calcium, Chloride...
+lgl (15): EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, Bilir...
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 36 Columns: 41
+Rows: 54 Columns: 41
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: "|"
-dbl (32): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (9): EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, TroponinI, Fibri...
+dbl (30): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, AST, BUN, Alkalinephos, Cal...
+lgl (11): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, Bilirubin_direct, L...
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 46 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (27): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
-lgl (14): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 53 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl (10): EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total,...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 25 Columns: 41
+Rows: 22 Columns: 41
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: "|"
 dbl (30): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl (11): EtCO2, SaO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Phospha...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 27 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (27): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
-lgl (14): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 43 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (25): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
-lgl (16): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 36 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (30): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, AST, BUN, Alkalinephos, Cal...
-lgl (11): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, Bilirubin_direct, L...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 38 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (34): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (7): EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Bilirubin_tot...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 37 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (30): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, AST, BUN, Alkalinephos, Cal...
-lgl (11): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, Bilirubin_direct, L...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 49 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (30): HR, O2Sat, Temp, SBP, MAP, Resp, BaseExcess, HCO3, FiO2, pH, PaCO2...
-lgl (11): DBP, EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_t...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 57 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (26): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, HCO3, BUN, Calcium, Chloride...
-lgl (15): EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, Bilir...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 19 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (28): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, AST, BUN, Alkalinephos, Cal...
-lgl (13): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, Bilirubin_direct, L...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 22 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (32): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (9): EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Phosphate, Bi...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 47 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (26): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
-lgl (15): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 21 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (27): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, HCO3, BUN, Calcium, Chloride...
-lgl (14): EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, Bilir...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 37 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (26): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, FiO2, BUN, Calcium, Chlorid...
-lgl (15): DBP, EtCO2, BaseExcess, pH, PaCO2, SaO2, AST, Alkalinephos, Biliru...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 43 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (32): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (9): EtCO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total, Tropo...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 37 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (30): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, AST, BUN, Alkalinephos, Cal...
-lgl (11): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, Bilirubin_direct, L...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 57 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl (10): EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total,...
+lgl (11): EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Lactate, Magn...
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 Rows: 45 Columns: 41
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: "|"
-dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl (10): EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Lactate, Phos...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 17 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (32): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (9): EtCO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bilirubin_tot...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 13 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (28): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, FiO2, BUN, Calcium, Chlorid...
-lgl (13): DBP, EtCO2, BaseExcess, pH, PaCO2, SaO2, AST, Alkalinephos, Biliru...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 46 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (32): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (9): EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Phosphate, Bi...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 17 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (29): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, AST, BUN, Alkalinephos, Cal...
-lgl (12): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, Bilirubin_direct, L...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 44 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (33): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (8): EtCO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bilirubin_tot...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 56 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (26): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, HCO3, BUN, Calcium, Chloride...
-lgl (15): EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, Bilir...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 37 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (35): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (6): EtCO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total, Tropo...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 22 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (28): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, AST, BUN, Alkalinephos, Cal...
-lgl (13): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, Bilirubin_direct, L...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 53 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (32): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (9): EtCO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bilirubin_tot...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 36 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (29): HR, O2Sat, Temp, SBP, MAP, Resp, BaseExcess, HCO3, pH, PaCO2, BUN,...
-lgl (12): DBP, EtCO2, FiO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Bilir...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 20 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (29): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl (12): EtCO2, SaO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Magnesi...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 22 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (29): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl (12): EtCO2, SaO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Lactate...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 49 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (30): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, pH, BUN, Calcium, Chloride,...
-lgl (11): DBP, EtCO2, BaseExcess, FiO2, PaCO2, SaO2, AST, Alkalinephos, Bili...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 55 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (28): HR, O2Sat, Temp, MAP, Resp, HCO3, FiO2, AST, BUN, Alkalinephos, Ca...
-lgl (13): SBP, DBP, EtCO2, BaseExcess, pH, PaCO2, SaO2, Bilirubin_direct, La...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 18 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (23): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Chloride, Creatinine, ...
-lgl (18): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 38 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
 dbl (27): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
 lgl (14): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 40 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (33): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (8): EtCO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total, Tropo...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 49 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (30): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, pH, AST, BUN, Alkalinephos,...
-lgl (11): DBP, EtCO2, BaseExcess, FiO2, PaCO2, SaO2, Bilirubin_direct, Tropo...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 48 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, pH, PaCO2,...
-lgl (10): EtCO2, FiO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 21 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (26): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
-lgl (15): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 51 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (26): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, FiO2, BUN, Chloride, Creati...
-lgl (15): DBP, EtCO2, BaseExcess, pH, PaCO2, SaO2, AST, Alkalinephos, Calciu...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 57 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (27): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, SaO2, BUN, Calcium, Chlorid...
-lgl (14): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, AST, Alkalinephos, Biliru...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 50 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (38): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (3): EtCO2, Bilirubin_direct, TroponinI
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 38 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (30): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, pH, PaCO2,...
-lgl (11): EtCO2, FiO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 41 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (27): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, pH, BUN, Calcium, Chloride,...
-lgl (14): DBP, EtCO2, BaseExcess, FiO2, PaCO2, SaO2, AST, Alkalinephos, Bili...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 25 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (26): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, HCO3, AST, BUN, Calcium, Chl...
-lgl (15): EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, Alkalinephos, Bilirubin_...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 39 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl (10): EtCO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Phosphate, Bi...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 37 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (28): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, FiO2, BUN, Calcium, Chlorid...
-lgl (13): DBP, EtCO2, BaseExcess, pH, PaCO2, SaO2, AST, Alkalinephos, Biliru...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 49 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (31): HR, O2Sat, Temp, SBP, MAP, Resp, BaseExcess, HCO3, pH, PaCO2, AST,...
-lgl (10): DBP, EtCO2, FiO2, SaO2, Bilirubin_direct, Lactate, TroponinI, Fibr...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">"-----n=50,function=read_delim"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "-----n=50,function=read_delim"</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>13.153 sec elapsed</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tic</span>()</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>test1<span class="ot">=</span><span class="fu">makeSepsisDataset</span>(<span class="at">n=</span><span class="dv">100</span>,<span class="at">read_fn =</span> <span class="st">"fread"</span>)</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">"-----n=100,function=fdread"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "-----n=100,function=fdread"</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>5.461 sec elapsed</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tic</span>()</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>test1<span class="ot">=</span><span class="fu">makeSepsisDataset</span>(<span class="at">n=</span><span class="dv">100</span>,<span class="at">read_fn =</span> <span class="st">"read_delim"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 19 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (27): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
-lgl (14): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 47 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (27): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, FiO2, BUN, Calcium, Chlorid...
-lgl (14): DBP, EtCO2, BaseExcess, pH, PaCO2, SaO2, AST, Alkalinephos, Biliru...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 40 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (24): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
-lgl (17): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 46 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (32): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, pH, PaCO2,...
-lgl  (9): EtCO2, FiO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 40 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (36): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (5): EtCO2, Bilirubin_direct, Lactate, TroponinI, PTT
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 57 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (27): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, pH, PaCO2, SaO2,...
-lgl (14): EtCO2, HCO3, FiO2, AST, Alkalinephos, Calcium, Chloride, Bilirubin...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 46 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (25): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, pH, PaCO2, SaO2,...
-lgl (16): EtCO2, HCO3, FiO2, AST, Alkalinephos, Chloride, Bilirubin_direct, ...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 46 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, HCO3, AST, BUN, Alkalinephos...
-lgl (10): EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, Bilirubin_direct, Lactat...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 53 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (30): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, pH, PaCO2,...
-lgl (11): EtCO2, FiO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total,...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 18 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (33): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (8): EtCO2, SaO2, Bilirubin_direct, Lactate, TroponinI, Fibrinogen, Uni...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 45 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (37): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (4): EtCO2, Bilirubin_direct, TroponinI, Fibrinogen
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 51 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (36): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, pH, PaCO2,...
-lgl  (5): EtCO2, FiO2, Bilirubin_direct, TroponinI, Fibrinogen
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 36 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (34): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (7): EtCO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total, Tropo...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 11 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (30): HR, O2Sat, Temp, SBP, MAP, Resp, BaseExcess, HCO3, pH, PaCO2, SaO2...
-lgl (11): DBP, EtCO2, FiO2, AST, Alkalinephos, Calcium, Magnesium, Phosphate...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 16 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (27): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, HCO3, BUN, Calcium, Chloride...
-lgl (14): EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, Bilir...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 19 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (25): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
-lgl (16): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 48 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (32): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, FiO2, pH, AST, BUN, Alkalin...
-lgl  (9): DBP, EtCO2, BaseExcess, PaCO2, SaO2, Bilirubin_direct, Lactate, Tr...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 47 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (24): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, FiO2, BUN, Chloride, Creati...
-lgl (17): DBP, EtCO2, BaseExcess, pH, PaCO2, SaO2, AST, Alkalinephos, Calciu...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 51 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (29): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, FiO2, SaO2, BUN, Calcium, C...
-lgl (12): DBP, EtCO2, BaseExcess, pH, PaCO2, AST, Alkalinephos, Bilirubin_di...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 57 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (33): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (8): EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Bilirubin_tot...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 17 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (27): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
-lgl (14): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 153 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (34): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (7): EtCO2, SaO2, Bilirubin_direct, TroponinI, Fibrinogen, Unit1, Unit2
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 35 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl (10): EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total,...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 37 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (27): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
-lgl (14): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 44 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (28): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, AST, BUN, Alkalinephos, Cal...
-lgl (13): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, Bilirubin_direct, L...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 50 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (25): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, FiO2, BUN, Calcium, Chlorid...
-lgl (16): DBP, EtCO2, BaseExcess, pH, PaCO2, SaO2, AST, Alkalinephos, Biliru...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 21 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (34): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (7): EtCO2, Calcium, Bilirubin_direct, Phosphate, TroponinI, PTT, Fibri...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 18 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (32): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (9): EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total,...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 58 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (36): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (5): EtCO2, SaO2, Bilirubin_direct, Lactate, TroponinI
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 16 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (27): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
-lgl (14): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 54 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl (10): EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Phosphate, Bi...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 47 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (33): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (8): EtCO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bilirubin_tot...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 57 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (31): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, FiO2, AST, BUN, Alkalinepho...
-lgl (10): DBP, EtCO2, BaseExcess, pH, PaCO2, SaO2, Bilirubin_direct, Troponi...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 20 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl (10): EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Lactate, Phos...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 43 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (35): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (6): EtCO2, Bilirubin_direct, TroponinI, Fibrinogen, Unit1, Unit2
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 47 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (27): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
-lgl (14): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 43 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (28): HR, O2Sat, Temp, SBP, MAP, Resp, BaseExcess, HCO3, FiO2, pH, PaCO2...
-lgl (13): DBP, EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bi...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 54 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (27): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
-lgl (14): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 47 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (30): HR, O2Sat, Temp, MAP, Resp, BaseExcess, HCO3, FiO2, pH, PaCO2, SaO...
-lgl (11): SBP, DBP, EtCO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_to...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 28 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (35): HR, O2Sat, Temp, SBP, MAP, Resp, BaseExcess, HCO3, FiO2, pH, PaCO2...
-lgl  (6): DBP, EtCO2, SaO2, Bilirubin_direct, TroponinI, Fibrinogen
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 39 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (32): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (9): EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total,...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 41 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (28): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, FiO2, BUN, Calcium, Chlorid...
-lgl (13): DBP, EtCO2, BaseExcess, pH, PaCO2, SaO2, AST, Alkalinephos, Biliru...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 48 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, pH, PaCO2,...
-lgl (10): EtCO2, FiO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 40 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, HCO3, SaO2, AST, BUN, Alkali...
-lgl (10): EtCO2, BaseExcess, FiO2, pH, PaCO2, Lactate, TroponinI, Fibrinogen...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 26 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (28): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, AST, BUN, Alkalinephos, Cal...
-lgl (13): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, Bilirubin_direct, L...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 39 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (33): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (8): EtCO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total, Tropo...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 29 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (33): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (8): EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total,...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 27 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (32): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (9): EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Magnesium, Ph...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 42 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (30): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, AST, BUN, Alkalinephos, Cal...
-lgl (11): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, Bilirubin_direct, L...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 41 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (27): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
-lgl (14): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 28 Columns: 41
+Rows: 15 Columns: 41
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: "|"
 dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
@@ -986,19 +196,179 @@ lgl (10): EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bilirub...
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 19 Columns: 41
+Rows: 39 Columns: 41
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: "|"
-dbl (26): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, HCO3, FiO2, BUN, Chloride, C...
-lgl (15): EtCO2, BaseExcess, pH, PaCO2, SaO2, AST, Alkalinephos, Calcium, Bi...
+dbl (28): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, AST, BUN, Alkalinephos, Cal...
+lgl (13): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, Bilirubin_direct, L...
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 28 Columns: 41
+Rows: 42 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (29): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, HCO3, FiO2, AST, BUN, Alkali...
+lgl (12): EtCO2, BaseExcess, pH, PaCO2, SaO2, Bilirubin_direct, Lactate, Tro...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 25 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (26): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, HCO3, BUN, Calcium, Chloride...
+lgl (15): EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, Bilir...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 58 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (34): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (7): EtCO2, SaO2, Bilirubin_direct, TroponinI, Fibrinogen, Unit1, Unit2
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 45 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (34): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (7): EtCO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total, Tropo...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 37 Columns: 41
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: "|"
 dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl (10): EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Lactate, Phos...
+lgl (10): EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Magnesium, Ph...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 24 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (28): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, pH, PaCO2,...
+lgl (13): EtCO2, FiO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Lactate, B...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 49 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (27): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, HCO3, pH, BUN, Calcium, Chlo...
+lgl (14): EtCO2, BaseExcess, FiO2, PaCO2, SaO2, AST, Alkalinephos, Bilirubin...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 31 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (33): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (8): EtCO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total, Tropo...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 36 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (30): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl (11): EtCO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bilirubin_tot...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 40 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (33): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (8): EtCO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bilirubin_tot...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 38 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (27): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, HCO3, FiO2, BUN, Calcium, Ch...
+lgl (14): EtCO2, BaseExcess, pH, PaCO2, SaO2, AST, Alkalinephos, Bilirubin_d...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 24 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (30): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl (11): EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Lactate, Phos...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 49 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (26): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, HCO3, BUN, Calcium, Chloride...
+lgl (15): EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, Bilir...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 44 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (33): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (8): EtCO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bilirubin_tot...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 54 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl (10): EtCO2, Alkalinephos, Bilirubin_direct, Lactate, Phosphate, Bilirub...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 25 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (33): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (8): EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Phosphate, Bi...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 24 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (29): HR, O2Sat, Temp, SBP, MAP, Resp, BaseExcess, HCO3, FiO2, pH, PaCO2...
+lgl (12): DBP, EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bi...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 38 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (30): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl (11): EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bilirub...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 24 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (29): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, FiO2, pH, PaCO2,...
+lgl (12): EtCO2, HCO3, AST, Alkalinephos, Calcium, Bilirubin_direct, Lactate...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 27 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (27): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
+lgl (14): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 52 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (37): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (4): EtCO2, Bilirubin_direct, Lactate, TroponinI
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
@@ -1010,191 +380,15 @@ lgl (11): EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Lactate, Phos...
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 39 Columns: 41
+Rows: 40 Columns: 41
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: "|"
-dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl (10): EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total,...
+dbl (26): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, pH, BUN, Calcium, Chloride,...
+lgl (15): DBP, EtCO2, BaseExcess, FiO2, PaCO2, SaO2, AST, Alkalinephos, Bili...
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 43 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (27): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
-lgl (14): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 48 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (33): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (8): EtCO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bilirubin_tot...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 56 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (34): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (7): EtCO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total, Tropo...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 41 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (26): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, HCO3, BUN, Calcium, Chloride...
-lgl (15): EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, Bilir...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 25 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (32): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (9): EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bilirub...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 45 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl (10): EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total,...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 37 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (26): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, HCO3, BUN, Calcium, Chloride...
-lgl (15): EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, Bilir...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 38 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (34): HR, O2Sat, Temp, SBP, MAP, Resp, BaseExcess, HCO3, pH, PaCO2, AST,...
-lgl  (7): DBP, EtCO2, FiO2, SaO2, Bilirubin_direct, TroponinI, Fibrinogen
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 48 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (27): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, FiO2, BUN, Calcium, Chlorid...
-lgl (14): DBP, EtCO2, BaseExcess, pH, PaCO2, SaO2, AST, Alkalinephos, Biliru...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 41 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (32): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (9): EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Lactate, Bili...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 37 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (35): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, pH, PaCO2,...
-lgl  (6): EtCO2, FiO2, Bilirubin_direct, TroponinI, Unit1, Unit2
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 57 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (29): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, AST, BUN, Alkalinephos, Cal...
-lgl (12): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, Bilirubin_direct, L...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 23 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (30): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl (11): EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Lactate, Magn...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 41 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl (10): EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Lactate, Phos...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 42 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (21): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Chloride, Creatinine, ...
-lgl (20): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 20 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (20): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, HCO3, BUN, Chloride, Creatin...
-lgl (21): EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, Calci...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 44 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (32): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (9): EtCO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Phosphate, Bi...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 59 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (33): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (8): EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bilirub...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 50 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (35): HR, O2Sat, Temp, SBP, MAP, Resp, BaseExcess, HCO3, FiO2, pH, PaCO2...
-lgl  (6): DBP, EtCO2, Bilirubin_direct, Lactate, TroponinI, Fibrinogen
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 18 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (21): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, FiO2, pH, PaCO2,...
-lgl (20): EtCO2, HCO3, AST, Alkalinephos, Calcium, Chloride, Bilirubin_direc...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 53 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (30): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, pH, PaCO2,...
-lgl (11): EtCO2, FiO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Lactate...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 49 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl (10): EtCO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bilirubin_tot...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 31 Columns: 41
+Rows: 16 Columns: 41
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: "|"
 dbl (24): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
@@ -1202,35 +396,19 @@ lgl (17): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 23 Columns: 41
+Rows: 45 Columns: 41
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: "|"
-dbl (26): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
-lgl (15): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
+dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl (10): EtCO2, SaO2, Alkalinephos, Bilirubin_direct, Lactate, TroponinI, P...
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 Rows: 19 Columns: 41
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: "|"
-dbl (27): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, AST, BUN, Alkalinephos, Cal...
-lgl (14): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, Bilirubin_direct, L...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 52 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (32): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (9): EtCO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bilirubin_tot...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 21 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (27): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, FiO2, pH, PaCO2,...
-lgl (14): EtCO2, HCO3, AST, Alkalinephos, Calcium, Chloride, Bilirubin_direc...
+dbl (26): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, HCO3, BUN, Calcium, Chloride...
+lgl (15): EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, Bilir...
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
@@ -1242,31 +420,47 @@ lgl (16): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 40 Columns: 41
+Rows: 41 Columns: 41
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: "|"
-dbl (31): HR, O2Sat, Temp, SBP, MAP, Resp, BaseExcess, HCO3, FiO2, pH, PaCO2...
-lgl (10): DBP, EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bi...
+dbl (35): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (6): EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 38 Columns: 41
+Rows: 46 Columns: 41
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: "|"
-dbl (35): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, pH, PaCO2,...
-lgl  (6): EtCO2, FiO2, Bilirubin_direct, TroponinI, Unit1, Unit2
+dbl (35): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (6): EtCO2, SaO2, Bilirubin_direct, Lactate, TroponinI, Fibrinogen
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 40 Columns: 41
+Rows: 36 Columns: 41
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: "|"
-dbl (34): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (7): EtCO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total, Tropo...
+dbl (36): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (5): EtCO2, Lactate, TroponinI, Unit1, Unit2
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 25 Columns: 41
+Rows: 19 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (27): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
+lgl (14): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 8 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (26): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, FiO2, BUN, Chloride, Creati...
+lgl (15): DBP, EtCO2, BaseExcess, pH, PaCO2, SaO2, AST, Alkalinephos, Calciu...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 44 Columns: 41
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: "|"
 dbl (33): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
@@ -1274,15 +468,15 @@ lgl  (8): EtCO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bilirubin_tot...
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 8 Columns: 41
+Rows: 22 Columns: 41
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: "|"
-dbl (30): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl (11): EtCO2, AST, Alkalinephos, Calcium, Creatinine, Bilirubin_direct, P...
+dbl (27): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
+lgl (14): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 38 Columns: 41
+Rows: 36 Columns: 41
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: "|"
 dbl (26): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, HCO3, BUN, Calcium, Chloride...
@@ -1290,7 +484,389 @@ lgl (15): EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, Bilir...
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 24 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (32): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (9): EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Phosphate, Bi...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 41 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (38): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (3): EtCO2, Bilirubin_direct, TroponinI
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 50 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (34): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (7): EtCO2, SaO2, Bilirubin_direct, TroponinI, Fibrinogen, Unit1, Unit2
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 90 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (35): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (6): EtCO2, SaO2, Bilirubin_direct, TroponinI, Unit1, Unit2
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 27 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (26): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
+lgl (15): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 40 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (35): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (6): EtCO2, Bilirubin_direct, Lactate, Fibrinogen, Unit1, Unit2
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 41 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (33): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (8): EtCO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bilirubin_tot...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 46 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (26): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
+lgl (15): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 57 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl (10): EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total,...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">"-----n=50,function=read_delim"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "-----n=50,function=read_delim"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>11.494 sec elapsed</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tic</span>()</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>test1<span class="ot">=</span><span class="fu">makeSepsisDataset</span>(<span class="at">n=</span><span class="dv">100</span>,<span class="at">read_fn =</span> <span class="st">"fread"</span>)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste0</span>(<span class="st">"-----n=100,function=fdread"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "-----n=100,function=fdread"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>4.973 sec elapsed</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tic</span>()</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>test1<span class="ot">=</span><span class="fu">makeSepsisDataset</span>(<span class="at">n=</span><span class="dv">100</span>,<span class="at">read_fn =</span> <span class="st">"read_delim"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 46 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (25): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
+lgl (16): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 48 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl (10): EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Phosphate, Bi...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 19 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (24): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
+lgl (17): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 15 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (15): HR, O2Sat, Temp, SBP, MAP, Resp, Glucose, Potassium, Age, Gender, ...
+lgl (26): DBP, EtCO2, BaseExcess, HCO3, FiO2, pH, PaCO2, SaO2, AST, BUN, Alk...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 54 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (33): HR, O2Sat, Temp, SBP, MAP, Resp, BaseExcess, HCO3, FiO2, pH, PaCO2...
+lgl  (8): DBP, EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, TroponinI, ...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 44 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl (10): EtCO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bilirubin_tot...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 37 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (34): HR, O2Sat, Temp, SBP, MAP, Resp, BaseExcess, HCO3, pH, PaCO2, AST,...
+lgl  (7): DBP, EtCO2, FiO2, SaO2, Bilirubin_direct, TroponinI, Fibrinogen
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 44 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (36): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (5): EtCO2, Bilirubin_direct, Bilirubin_total, TroponinI, Fibrinogen
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 44 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (29): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, AST, BUN, Alkalinephos, Cal...
+lgl (12): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, Bilirubin_direct, L...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 57 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (30): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl (11): EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Lactate, Phos...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 40 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (25): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
+lgl (16): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 46 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (39): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (2): EtCO2, Bilirubin_direct
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 47 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (35): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (6): EtCO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total, Tropo...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 33 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (36): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, pH, PaCO2,...
+lgl  (5): EtCO2, FiO2, Bilirubin_direct, TroponinI, Fibrinogen
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 19 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (24): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, HCO3, pH, BUN, Chloride, Cre...
+lgl (17): EtCO2, BaseExcess, FiO2, PaCO2, SaO2, AST, Alkalinephos, Calcium, ...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 16 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (27): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
+lgl (14): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 Rows: 45 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (31): HR, O2Sat, Temp, SBP, MAP, Resp, BaseExcess, HCO3, FiO2, pH, PaCO2...
+lgl (10): DBP, EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bi...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 37 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (30): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl (11): EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Lactate, Phos...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 28 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (31): HR, O2Sat, Temp, SBP, MAP, Resp, BaseExcess, HCO3, FiO2, pH, PaCO2...
+lgl (10): DBP, EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bi...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 42 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (28): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, FiO2, BUN, Calcium, Chlorid...
+lgl (13): DBP, EtCO2, BaseExcess, pH, PaCO2, SaO2, AST, Alkalinephos, Biliru...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 24 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (25): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
+lgl (16): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 54 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (30): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, pH, PaCO2,...
+lgl (11): EtCO2, FiO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bilirub...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 44 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (25): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, HCO3, BUN, Calcium, Chloride...
+lgl (16): EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, Bilir...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 17 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl (10): EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bilirub...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 25 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (35): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (6): EtCO2, Bilirubin_direct, TroponinI, Fibrinogen, Unit1, Unit2
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 37 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (37): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (4): EtCO2, Bilirubin_direct, Bilirubin_total, TroponinI
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 100 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (35): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (6): EtCO2, Bilirubin_direct, TroponinI, Fibrinogen, Unit1, Unit2
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 23 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl (10): EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Lactate, Phos...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 37 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (30): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl (11): EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Lactate, Magn...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 17 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (26): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, FiO2, BUN, Calcium, Chlorid...
+lgl (15): DBP, EtCO2, BaseExcess, pH, PaCO2, SaO2, AST, Alkalinephos, Biliru...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 50 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (23): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Chloride, Creatinine, ...
+lgl (18): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 41 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (32): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (9): EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total,...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 40 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (34): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, pH, SaO2, AST, BUN, Alkalin...
+lgl  (7): DBP, EtCO2, BaseExcess, FiO2, PaCO2, Lactate, TroponinI
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 58 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (30): HR, O2Sat, Temp, SBP, MAP, Resp, BaseExcess, HCO3, FiO2, pH, PaCO2...
+lgl (11): DBP, EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_t...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 11 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (25): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
+lgl (16): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 17 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (25): HR, Temp, SBP, MAP, HCO3, BUN, Calcium, Chloride, Creatinine, Gluc...
+lgl (16): O2Sat, DBP, Resp, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, A...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 35 Columns: 41
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: "|"
 dbl (34): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
@@ -1298,7 +874,199 @@ lgl  (7): EtCO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total, Tropo...
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 76 Columns: 41
+Rows: 40 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (32): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (9): EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bilirub...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 45 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl (10): EtCO2, SaO2, Alkalinephos, Bilirubin_direct, Lactate, TroponinI, P...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 14 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (27): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, HCO3, AST, BUN, Alkalinephos...
+lgl (14): EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, Calcium, Bilirubin_direc...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 11 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (38): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (3): EtCO2, Bilirubin_direct, TroponinI
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 51 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl (10): EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total,...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 48 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (30): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl (11): EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bilirub...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 56 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (38): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (3): EtCO2, SaO2, TroponinI
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 54 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (32): HR, O2Sat, Temp, SBP, MAP, Resp, BaseExcess, HCO3, FiO2, pH, PaCO2...
+lgl  (9): DBP, EtCO2, Alkalinephos, Bilirubin_direct, Lactate, Bilirubin_tot...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 26 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (25): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
+lgl (16): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 26 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (30): HR, O2Sat, Temp, SBP, MAP, Resp, BaseExcess, HCO3, FiO2, pH, PaCO2...
+lgl (11): DBP, EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bi...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 51 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (29): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, HCO3, SaO2, AST, BUN, Alkali...
+lgl (12): EtCO2, BaseExcess, FiO2, pH, PaCO2, Bilirubin_direct, Lactate, Pho...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 43 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (29): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl (12): EtCO2, SaO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Magnesi...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 19 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (30): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl (11): EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Lactate, Phos...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 40 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (35): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (6): EtCO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total, Tropo...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 49 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (29): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, HCO3, pH, SaO2, BUN, Calcium...
+lgl (12): EtCO2, BaseExcess, FiO2, PaCO2, AST, Alkalinephos, Bilirubin_direc...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 44 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl (10): EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total,...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 34 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (32): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (9): EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Phosphate, Bi...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 9 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (31): HR, O2Sat, Temp, SBP, MAP, Resp, BaseExcess, HCO3, FiO2, pH, PaCO2...
+lgl (10): DBP, EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bi...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 22 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (25): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, HCO3, BUN, Calcium, Chloride...
+lgl (16): EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, Bilir...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 40 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (33): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (8): EtCO2, SaO2, Calcium, Bilirubin_direct, Lactate, Phosphate, Tropon...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 46 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (25): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, HCO3, BUN, Calcium, Chloride...
+lgl (16): EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, Bilir...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 49 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (36): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (5): EtCO2, TroponinI, Fibrinogen, Unit1, Unit2
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 28 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (32): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (9): EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Phosphate, Bi...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 50 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (32): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (9): EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total,...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 52 Columns: 41
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: "|"
 dbl (32): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
@@ -1306,7 +1074,191 @@ lgl  (9): EtCO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total, Tropo...
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 21 Columns: 41
+Rows: 59 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (36): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (5): EtCO2, Bilirubin_direct, TroponinI, Unit1, Unit2
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 48 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (32): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (9): EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Lactate, Bili...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 20 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (24): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
+lgl (17): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 27 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (28): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, AST, BUN, Alkalinephos, Cal...
+lgl (13): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, Bilirubin_direct, L...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 17 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (35): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (6): EtCO2, Bilirubin_direct, TroponinI, Fibrinogen, Unit1, Unit2
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 38 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (37): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (4): EtCO2, TroponinI, Unit1, Unit2
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 36 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (33): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (8): EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total,...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 17 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (25): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, HCO3, BUN, Calcium, Chloride...
+lgl (16): EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, Bilir...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 26 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (29): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, HCO3, AST, BUN, Alkalinephos...
+lgl (12): EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, Bilirubin_direct, Lactat...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 46 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (32): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (9): EtCO2, SaO2, Bilirubin_direct, Lactate, Bilirubin_total, TroponinI...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 19 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (26): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
+lgl (15): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 20 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (33): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (8): EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Bilirubin_tot...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 41 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (34): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (7): EtCO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total, Tropo...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 23 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl (10): EtCO2, SaO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Magnesi...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 24 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (28): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl (13): EtCO2, SaO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Lactate...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 36 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (32): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (9): EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Magnesium, Ph...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 32 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (31): HR, O2Sat, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, PaCO2,...
+lgl (10): Temp, EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Phospha...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 36 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (27): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
+lgl (14): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 24 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (29): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, AST, BUN, Alkalinephos, Cal...
+lgl (12): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, Bilirubin_direct, L...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 50 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (37): HR, O2Sat, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, PaCO2,...
+lgl  (4): Temp, EtCO2, Bilirubin_direct, TroponinI
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 46 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (35): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (6): EtCO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total, Tropo...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 46 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (34): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (7): EtCO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total, Tropo...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 20 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (26): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
+lgl (15): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 36 Columns: 41
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: "|"
 dbl (25): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, FiO2, BUN, Calcium, Chlorid...
@@ -1314,43 +1266,35 @@ lgl (16): DBP, EtCO2, BaseExcess, pH, PaCO2, SaO2, AST, Alkalinephos, Biliru...
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 52 Columns: 41
+Rows: 50 Columns: 41
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: "|"
-dbl (37): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (4): EtCO2, Bilirubin_direct, TroponinI, Fibrinogen
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 44 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (32): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, HCO3, FiO2, AST, BUN, Alkali...
-lgl  (9): EtCO2, BaseExcess, pH, PaCO2, SaO2, Bilirubin_direct, Lactate, Tro...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 19 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl (10): EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Phospha...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 47 Columns: 41
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: "|"
-dbl (29): HR, O2Sat, Temp, SBP, MAP, Resp, BaseExcess, HCO3, pH, PaCO2, BUN,...
-lgl (12): DBP, EtCO2, FiO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Bilir...
+dbl (34): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, pH, PaCO2,...
+lgl  (7): EtCO2, FiO2, Bilirubin_direct, Lactate, TroponinI, Unit1, Unit2
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 Rows: 36 Columns: 41
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: "|"
-dbl (30): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, pH, PaCO2,...
-lgl (11): EtCO2, FiO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total,...
+dbl (35): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, pH, PaCO2,...
+lgl  (6): EtCO2, FiO2, Bilirubin_direct, Lactate, TroponinI, Fibrinogen
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 43 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (32): HR, O2Sat, Temp, SBP, MAP, Resp, BaseExcess, HCO3, pH, PaCO2, AST,...
+lgl  (9): DBP, EtCO2, FiO2, SaO2, Bilirubin_direct, TroponinI, Fibrinogen, U...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 21 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (27): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
+lgl (14): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
@@ -1358,23 +1302,79 @@ Rows: 49 Columns: 41
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: "|"
 dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl (10): EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Bilirubin_tot...
+lgl (10): EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total,...
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
 Rows: 42 Columns: 41
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: "|"
-dbl (28): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, pH, AST, BUN, Alkalinephos,...
-lgl (13): DBP, EtCO2, BaseExcess, FiO2, PaCO2, SaO2, Bilirubin_direct, Lacta...
+dbl (35): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (6): EtCO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total, Tropo...
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
-Rows: 39 Columns: 41
+Rows: 42 Columns: 41
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: "|"
-dbl (32): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
-lgl  (9): EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bilirub...
+dbl (29): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, AST, BUN, Alkalinephos, Cal...
+lgl (12): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, Bilirubin_direct, L...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 47 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (27): HR, O2Sat, Temp, SBP, MAP, Resp, HCO3, BUN, Calcium, Chloride, Cre...
+lgl (14): DBP, EtCO2, BaseExcess, FiO2, pH, PaCO2, SaO2, AST, Alkalinephos, ...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 51 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (34): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, pH, PaCO2,...
+lgl  (7): EtCO2, FiO2, Bilirubin_direct, TroponinI, Fibrinogen, Unit1, Unit2
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 38 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (31): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl (10): EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Bilirubin_total,...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 46 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (33): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (8): EtCO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bilirubin_tot...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 46 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (37): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (4): EtCO2, TroponinI, Unit1, Unit2
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 40 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (36): HR, O2Sat, Temp, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, ...
+lgl  (5): EtCO2, Bilirubin_direct, TroponinI, Unit1, Unit2
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 20 Columns: 41
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "|"
+dbl (30): HR, O2Sat, SBP, MAP, DBP, Resp, BaseExcess, HCO3, FiO2, pH, PaCO2,...
+lgl (11): Temp, EtCO2, AST, Alkalinephos, Calcium, Bilirubin_direct, Magnesi...
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
@@ -1385,7 +1385,7 @@ lgl  (9): EtCO2, SaO2, AST, Alkalinephos, Bilirubin_direct, Lactate, Bilirub...
 </div>
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>18.333 sec elapsed</code></pre>
+<pre><code>17.945 sec elapsed</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tic</span>()</span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>test1<span class="ot">=</span><span class="fu">makeSepsisDataset</span>(<span class="at">n=</span><span class="dv">500</span>,<span class="at">read_fn =</span> <span class="st">"fread"</span>)</span>
